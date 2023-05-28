@@ -5,8 +5,10 @@ const memeAuthor = document.querySelector(".meme-generator .meme-author");
 
 const updateDetails = (url , title , author) => {
     memeImage.setAttribute("src", url);
+    memeImage.onload = () => {
     memeTitle.innerHTML = title;
     memeAuthor.innerHTML = `Meme by : ${author}`;
+    };
 };
 
 
